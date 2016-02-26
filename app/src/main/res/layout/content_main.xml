@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main"
+    tools:context="choochoohoo.mathsuks.MainActivity">
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="50dp"
+        android:id="@+id/Answer" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate!"
+        android:id="@+id/calculate"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="106dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is"
+        android:id="@+id/textStatic1"
+        android:textSize="25dp"
+        android:layout_below="@+id/Answer"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/percentNum"
+        android:hint="Enter Number"
+        android:textAlignment="center"
+        android:layout_below="@+id/textStatic1"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/inputNum"
+        android:hint="Enter Number"
+        android:textAlignment="center"
+        android:layout_above="@+id/calculate"
+        android:layout_alignLeft="@+id/percentNum"
+        android:layout_alignStart="@+id/percentNum" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Container"
+        android:measureWithLargestChild="false"
+        android:layout_below="@+id/percentNum"
+        android:layout_alignLeft="@+id/calculate"
+        android:layout_alignStart="@+id/calculate"
+        android:layout_above="@+id/inputNum"
+        android:layout_alignRight="@+id/calculate"
+        android:layout_alignEnd="@+id/calculate">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plus"
+            android:id="@+id/Add"
+            android:layout_below="@+id/percentNum"
+            android:layout_toLeftOf="@+id/Subtract"
+            android:layout_toStartOf="@+id/Subtract"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minus"
+            android:id="@+id/Subtract"
+            android:layout_below="@+id/percentNum"
+            android:layout_toLeftOf="@+id/Multiply"
+            android:layout_toStartOf="@+id/Multiply" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Times"
+            android:id="@+id/Multiply"
+            android:layout_below="@+id/percentNum"
+            android:layout_alignLeft="@+id/Answer"
+            android:layout_alignStart="@+id/Answer"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Divided by"
+            android:id="@+id/Divide"
+            android:layout_below="@+id/percentNum"
+            android:layout_toRightOf="@+id/Multiply"
+            android:layout_toEndOf="@+id/Multiply" />
+    </RadioGroup>
+
+</RelativeLayout>
